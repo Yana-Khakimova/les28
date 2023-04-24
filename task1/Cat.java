@@ -1,4 +1,4 @@
-package src;
+package task1;
 
 import java.util.List;
 import java.util.Random;
@@ -60,8 +60,9 @@ final class Cat {
 
     /*********/
 
-    // Ваш код может находится здесь
-    // остальную часть этого файла вы менять не можете
+    public String perform(String s) {
+        return s;
+    }
 
     /*********/
 }
