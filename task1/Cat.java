@@ -1,5 +1,6 @@
 package task1;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -27,8 +28,6 @@ final class Cat {
     }
 
     public static final List<Cat> makeCats(int amount) {
-        // это называется конвейерная обработка.
-        // будем проходить на одном из занятий
         return Stream.generate(Cat::new)
                 .limit(amount)
                 .collect(Collectors.toList());
@@ -59,10 +58,13 @@ final class Cat {
     }
 
     /*********/
-
-    public String perform(String s) {
-        return s;
+    public static List<Cat> copy(List<Cat> cats){
+        List<Cat> catsNew = new ArrayList<>();
+        catsNew.addAll(cats);
+        return catsNew;
     }
+
+  /*  public abstract String perform(String s); */
 
     /*********/
 }
