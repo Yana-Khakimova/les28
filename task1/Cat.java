@@ -58,7 +58,5 @@ final class Cat {
         return catsNew;
     }
 
-  /*  public abstract String perform(String s); */
-
     /*********/
 }

@@ -9,8 +9,8 @@ public final class ActiveCat {
             "Millie", "Daisy", "Jasper", "Misty", "Minka");
     private final String name;
 
-    private Supplier<String> action;
-    public ActiveCat( Supplier<String>  action) {
+    private Perform action;
+    public ActiveCat( Perform action) {
         name = names.get(r.nextInt(names.size()));
         this.action = action;
     }
@@ -37,10 +37,6 @@ public final class ActiveCat {
     }
     public static String purr() {
         return "Я мурлычу!";
-    }
-
-    public interface Supplier<T>{
-        T perform();
     }
 
 
