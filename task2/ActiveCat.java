@@ -9,19 +9,14 @@ public final class ActiveCat {
             "Millie", "Daisy", "Jasper", "Misty", "Minka");
     private final String name;
 
-    private String action;
-
-    public ActiveCat(String action) {
+    private Supplier<String> action;
+    public ActiveCat( Supplier<String>  action) {
         name = names.get(r.nextInt(names.size()));
         this.action = action;
     }
 
-    public final String getName() {
-        return name;
-    }
-
     public void doAction() {
-        System.out.printf("Я %s. %s%n", name, action);
+        System.out.printf("Я %s. %s%n", name, action.perform());
     }
 
     /*****/
@@ -42,6 +37,10 @@ public final class ActiveCat {
     }
     public static String purr() {
         return "Я мурлычу!";
+    }
+
+    public interface Supplier<T>{
+        T perform();
     }
 
 
